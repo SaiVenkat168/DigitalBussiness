@@ -9,6 +9,8 @@ import {
   userData,
   boardData,
 } from "../../data/data";
+import Statistics from '../../components/Layouts/Statistics/Statistics';
+import Order from '../../components/Orders/Order';
 
 const Dashboard = () => {
   return (
@@ -44,8 +46,11 @@ const Dashboard = () => {
           </div>
 
       </div>
+
+      <Statistics/>
+
     </div>
-    <div className={css.dashboard}>Orders</div>
+    <div className={css.dashboard}><Order/></div>
 
 
 
