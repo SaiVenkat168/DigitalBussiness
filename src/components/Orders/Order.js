@@ -1,6 +1,7 @@
 import React from 'react'
 import { groupNumber, ordersData } from "../../data/data";
 import css from './Orders.module.css'
+import OrdersPieChart from '../OrdersPieChart/OrdersPieChart'
 const Order = () => {
   return (
     <div className={`${css.container} theme-container`}>
@@ -14,7 +15,6 @@ const Order = () => {
         <span>Amout</span>
         <span>{groupNumber(3662)}</span>
       </div>
-
       <div className={css.orders}>
         {ordersData.map((order, index) => (
           <div key={index} className={css.order}>
@@ -33,7 +33,7 @@ const Order = () => {
 
       <div className={css.orderChars}>
         <span>Split by orders</span>
-        {/* <OrdersPieChart /> */}
+        <OrdersPieChart />
       </div>
 
     </div>
